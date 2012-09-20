@@ -1,0 +1,7 @@
+bsh.:			beanshell
+pinyin4j		转拼音
+xstream			xml工具
+ehcashe			缓存工具
+oscache			缓存工具
+jxl			    excel工具
+ibm/xml.jar     不建议在生成的war包中，此包是由websphere6.1中的jdk复制过来，目的是放到tomcat环境里。用于加密解密类:Encrypt.java

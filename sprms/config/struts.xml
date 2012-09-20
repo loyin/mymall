@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<include file="struts-default.xml"></include>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.locale" value="zh_CN"></constant>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="base" namespace="/" extends="struts-default">
+<!--		<result-types>-->
+<!--            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>-->
+<!--        </result-types>-->
+		<interceptors>
+<!--			<interceptor name="json" class="com.googlecode.jsonplugin.JSONInterceptor"/>-->
+			<interceptor-stack name="bussStack">
+				<interceptor-ref name="defaultStack"/>
+<!--				<interceptor-ref name="json"/>-->
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="bussStack"></default-interceptor-ref>
+		<global-results>
+			<result name="action" type="redirectAction">${action}</result>
+			<result name="input" type="dispatcher">${inputUri}</result>
+		</global-results>
+		<action name="*_*" class="{1}Action" method="{2}">
+			<result name="success" type="dispatcher">/pages/{1}/{2}.jsp</result>
+			<result name="web" type="dispatcher">/pages/{1}/${webpage}.jsp</result>
+		</action>
+		<action name="*" class="{1}Action" method="execute">
+			<result name="success" type="dispatcher">/pages/{1}/index.jsp</result>
+			<result name="web" type="dispatcher">/pages/{1}/${webpage}.jsp</result>
+		</action>
+		<action name="main">
+			<result>/main.jsp</result>
+		</action>
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+</struts>

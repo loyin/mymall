@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context reloadable="true" crossContext="true">
+ <WatchedResource>WEB-INF/web.xml</WatchedResource>
+ <!-- 
+ 	name             表示指定的jndi名称 (这个名字这里可以随便写) 
+	auth             表示认证方式，一般为Container 
+	type             表示数据源床型，使用标准的javax.sql.DataSource 
+	maxActive        表示连接池当中最大的数据库连接 
+	maxIdle          表示最大的空闲连接数 
+	maxWait          当池的数据库连接已经被占用的时候，最大等待时间 
+	logAbandoned     表示被丢弃的数据库连接是否做记录，以便跟踪 
+	username         表示数据库用户名 
+	password         表示数据库用户的密码 
+	driverClassName  表示JDBC DRIVER 
+	url              表示数据库URL地址 
+  -->
+<Resource
+	 name="sprms"
+	 auth="Container"
+	 type="javax.sql.DataSource"
+	 driverClassName="oracle.jdbc.driver.OracleDriver"
+	 url="jdbc:oracle:thin:@127.0.0.1:1521:orcl"
+	 username="jyd"
+	 password="jyd"
+	 maxActive="80"
+	 maxIdle="30"
+	 maxWait="1000"/>
+</Context>

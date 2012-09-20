@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="src" path="core"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/commons/commons-beanutils-1.7.0.jar" sourcepath="C:/Users/Administrator/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0-sources.jar"/>
+	<classpathentry kind="lib" path="libs/commons/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="libs/commons/commons-io-1.3.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="libs/commons/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="libs/commons/commons-net-ftp-current.jar"/>
+	<classpathentry kind="lib" path="libs/commons/jxl.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/ejb3-persistence-1.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/hibernate-3.2.6.ga.jar" sourcepath="C:/Users/Administrator/.m2/repository/org/hibernate/hibernate/3.2.6.ga/hibernate-3.2.6.ga-sources.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/hibernate-annotations-3.3.1.GA.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/hibernate-commons-annotations-3.0.0.ga.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/hibernate-entitymanager-3.3.2.GA.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/hibernate-search-3.0.0.cr1.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate/hibernate-validator-3.0.0.ga.jar"/>
+	<classpathentry kind="lib" path="libs/lucene/lucene-analyzers-2.3.2.jar"/>
+	<classpathentry kind="lib" path="libs/lucene/lucene-core-2.3.2.jar"/>
+	<classpathentry kind="lib" path="libs/spring/acegi-security-1.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/spring/asm-1.5.3.jar"/>
+	<classpathentry kind="lib" path="libs/spring/asm-attrs-1.5.3.jar"/>
+	<classpathentry kind="lib" path="libs/spring/cglib-2.1_3.jar"/>
+	<classpathentry kind="lib" path="libs/spring/jta-1.0.1B.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/freemarker-2.3.15.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/json-lib-2.1.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/ognl-2.7.3.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/struts2-core-2.1.8.1.jar" sourcepath="C:/Users/Administrator/.m2/repository/org/apache/struts/struts2-core/2.1.8.1/struts2-core-2.1.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/struts2-json-plugin-2.1.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/struts2-spring-plugin-2.1.8.1.jar"/>
+	<classpathentry kind="lib" path="libs/struts2/xwork-core-2.1.6.jar"/>
+	<classpathentry kind="lib" path="libs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="libs/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="libs/json-20080701.jar"/>
+	<classpathentry kind="lib" path="libs/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="libs/oscache-2.4.jar"/>
+	<classpathentry kind="lib" path="libs/c3p0-0.9.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/fr/fr-server-6.2_po.jar"/>
+	<classpathentry kind="lib" path="libs/poi/geronimo-stax-api_1.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/poi/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="libs/poi/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="libs/poi/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="libs/poi/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="libs/jsoup-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_21"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
