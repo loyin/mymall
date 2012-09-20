@@ -1,0 +1,50 @@
+<#macro layout title>
+<#compress><#--用来压缩空白空间和空白的行-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>${(title)!}</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link href='${root!}/css/tmallfocus.css' type="text/css" rel="stylesheet" />
+<link href='${root!}/xheditor/style.css' type="text/css" rel="stylesheet"/>
+<script type="text/javascript">var path="${root!}";</script>
+<script src='${root!}/js/jquery.min.js' type="text/javascript"></script>
+<script src='${root!}/js/web.js' type="text/javascript"></script>
+<script src='${root!}/xheditor/xheditor.js' type="text/javascript"></script>
+<script src='${root!}/js/tmallpicfocus.js' type="text/javascript"></script>
+<#-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src='${root!}/js/html5.js' type="text/javascript"></script>
+<![endif]-->
+</head>
+<#assign bodywidth=1060/>
+<body style="background-color:#50a5db;margin:0px;padding:0px;height:auto;">
+<#--头部-->
+<div>
+<@header/>
+</div>
+<br><br>
+<div style="background:url('${root}/image/topMainBK.gif');">
+<div style=" margin:0 auto;width:${bodywidth}px;height:110px;">
+</div>
+</div>
+<div style="background-color:#EFEEEC;height:auto;">
+<div style="height:auto;margin:0 auto;width:${bodywidth}px;background:url('${root}/image/border.png') repeat-y ;padding-left:23px;padding-right:23px;">
+<#--border-left:1px solid #EEE;border-right:1px solid #EEE;padding:5px;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);background:url('${root}/image/border.gif') repeat-y ;-->
+<#nested>
+</div>
+</div>
+<#--底部-->
+<style>
+#footer *{color:#fff;}
+a:HOVER,a {text-decoration:none;color:#fff;}
+</style>
+<div style="margin:0 auto;padding:0px;width:${bodywidth}px;">
+<div id="footer" style="padding:10px;text-align:center;">
+<p><a href="http://www.my1818.net" target="_blank">名易科技</a><sup>&copy;</sup>2012</p>
+</div>
+</div>
+</body>
+</html>
+</#compress><#--用来压缩空白空间和空白的行-->
+</#macro>

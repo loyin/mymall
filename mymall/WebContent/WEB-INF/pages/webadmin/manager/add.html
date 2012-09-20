@@ -1,0 +1,55 @@
+<#include "/WEB-INF/pages/webadmin/inc/_layout.html"/>
+<@layout>
+<#if pwd!="">
+<script>
+$(function() { 
+    ZeroClipboardInit(); 
+}); 
+function ZeroClipboardInit() { 
+var clip = new ZeroClipboard.Client(); 
+clip.addEventListener('complete', function(client, text) {
+alertMsg.info("已拷贝到剪贴板！");
+//多个拷贝按钮需要绑定拷贝时需移除上一个clip 
+clip.destroy(); 
+}); 
+clip.setText('${pwd!}');
+//绑定DOM中的元素ID，一般为Input 
+clip.glue('BtnExport'); 
+}
+</script>
+</#if>
+<div class="pageContent">
+		<form method="post" action="${root!}/ht/manager/<#if (pojo.id!0) !=0>update<#else>save</#if>" id="articlefrom" class="pageForm required-validate"onsubmit="return validateCallback(this, dialogAjaxDone);">
+			<input name="manager.id" type="hidden" value="${pojo.id!}">
+			<div class="pageFormContent" id="articleSave" layoutH="55">
+				<p>
+					<label>账号：</label> <input class="required" value="${pojo.userno!}" name="manager.userno"<#if (pojo.id!0) !=0> readonly="readonly"</#if>/>
+				</p>
+				<p>
+					<label>姓名：</label><input class="required" name="manager.username" value="${pojo.username!}">
+				</p>
+				<#if pwd!="">
+				<p><label>随机密码：</label>
+					<input type="hidden" name="manager.pwd" value="${pwd2!}">
+					<b>${pwd!}</b>&nbsp;<font color="red">请牢记此密码</font><a id="BtnExport" href="#"title="复制密码到剪贴板">复制</a>
+				</p>
+				</#if>
+			</div>
+			<div class="formBar">
+				<ul>
+					<li><div class="buttonActive">
+							<div class="buttonContent">
+								<button type="submit">保存</button>
+							</div>
+						</div></li>
+					<li>
+						<div class="button">
+							<div class="buttonContent">
+								<button type="Button" class="close">关闭</button>
+							</div>
+						</div></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</@layout>

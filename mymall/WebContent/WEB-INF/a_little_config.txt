@@ -1,0 +1,4 @@
+jdbcUrl = jdbc:mysql://127.0.0.1/mymall?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+user = root
+password = 123456
+devMode = true

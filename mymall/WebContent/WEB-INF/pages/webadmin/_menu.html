@@ -1,0 +1,26 @@
+<#macro menu role>
+<#assign path="${root}/ht/">
+<div class="accordionHeader">
+	<h2>
+		<span>Folder</span>会员管理
+	</h2>
+</div>
+<div class="accordionContent">
+	<ul class="tree treeFolder">
+		<li><a href="message" target="navTab" rel="message">站内信息管理</a>
+		<li><a href="reply" target="navTab" rel="reply">站内信息回复</a>
+	</ul>
+</div>
+<div class="accordionHeader">
+	<h2>
+		<span>Folder</span>系统管理
+	</h2>
+</div>
+<div class="accordionContent">
+	<ul class="tree treeFolder">
+		<li><a href="${path}manager" target="navTab" rel="manager">网站管理用户</a></li>
+		<li><a href="" target="navTab" rel="links">友情链接</a></li>
+		<li><a href="" target="navTab" rel="diqu">地区管理</a></li>
+	</ul>
+</div>
+</#macro>

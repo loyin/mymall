@@ -1,0 +1,27 @@
+<#macro table data width layouth>
+<table class="table" width="${width!'1000px'}" layouth="${layouth!}">
+<thead><tr><th width="50px">序号</th>
+<#list data as d>
+<#if d_index == 0 >
+<#list d.getColumns().keySet().toArray() as t>
+<#if t_index gt 0 >
+<th>${t!}</th>
+</#if>
+</#list>
+</#if>
+</#list>
+</tr></thead>
+<tbody>
+<#list data as d>
+<tr  target="sid_key" rel="${d.id!}">
+<td>${d_index+1}</td>
+<#list d.getColumns().values().toArray() as t>
+<#if t_index gt 0 >
+<td>${t!}</td>
+</#if>
+</#list>
+</tr>
+</#list>
+</tbody>
+</table>
+</#macro>

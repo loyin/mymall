@@ -1,0 +1,16 @@
+<#macro paginate currentPage totalPage totalRow pageSize>
+<div class="panelBar">
+	<div class="pages">
+		<span>显示</span>
+		<select name="pageSize" onchange="navTabPageBreak({numPerPage:this.value})">
+			<option value="${pageSize!}" selected="selected">${pageSize!}</option>
+			<option value="20">20</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>
+		<span>条，共${totalRow!}条/${totalPage!}页&nbsp;</span>
+	</div>
+	<div class="pagination" targetType="navTab" totalCount="${totalRow!}" numPerPage="${pageSize!}" 
+	pageNumShown="10" currentPage="${pageNumber!}"></div>
+</div>
+</#macro>

@@ -1,0 +1,127 @@
+<#compress><#--用来压缩空白空间和空白的行-->
+<#include "_menu.html"/>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>myMall管理平台</title>
+<link href="${root!}/ht/dwz/default/style.css"rel="stylesheet" type="text/css" media="screen" />
+<link href="${root!}/ht/dwz/css/core.css"rel="stylesheet" type="text/css" media="screen" />
+<link href="${root!}/ht/dwz/css/print.css"rel="stylesheet" type="text/css" media="print" />
+<link href="${root!}/ht/webadmin.css"rel="stylesheet" type="text/css" media="screen" />
+<!--[if IE]>
+<link href="${root!}/ht/dwz/css/ieHack.css" rel="stylesheet" type="text/css" media="screen"/>
+<![endif]-->
+<link href="${root!}/xheditor/style.css" rel="stylesheet" />
+<script src="${root!}/js/jquery.min.js"></script>
+<script src="${root!}/js/jquery.cookie.js"></script>
+<script src="${root!}/js/jquery.validate.js"></script>
+<script src="${root!}/js/jquery.bgiframe.js"></script>
+<script src="${root!}/xheditor/xheditor.js"></script>
+<script src="${root!}/js/dwz.min.js"></script>
+<script src="${root!}/js/dwz.regional.zh.js"></script>
+<script src="${root!}/js/web.js"></script>
+<script src="${root!}/js/ZeroClipboard.js"></script>
+<script>
+	var path = "${root!}";
+	$(function() {
+		DWZ.init("${root!}/ht/dwz/dwz.frag.xml", {
+			loginUrl : "${root!}/webadmin/loginDialog",
+			loginTitle : "登录", // 弹出登录对话框
+			//		loginUrl:"login.html",	// 跳到登录页面
+			statusCode : {
+				ok : 200,
+				error : 300,
+				timeout : 301
+			}, //【可选】
+			pageInfo : {
+				pageNum : "pageNum",
+				numPerPage : "numPerPage",
+				orderField : "orderField",
+				orderDirection : "orderDirection"
+			}, //【可选】
+			debug : false, // 调试模式 【true|false】
+			callback : function() {
+				initEnv();
+				$("#themeList").theme({
+					themeBase : "${root!}/ht/dwz"
+				}); // themeBase 相对于index页面的主题base路径
+			}
+		});
+	});
+</script>
+</head>
+<body scroll="no">
+	<div id="layout">
+		<div id="header">
+			<div class="headerNav">
+				<a class="logo" href="#">标志</a>
+				<ul class="nav">
+					<li><a href="logout">退出</a>
+					</li>
+				</ul>
+			</div>
+			<!-- navMenu -->
+		</div>
+		<div id="leftside">
+			<div id="sidebar_s">
+				<div class="collapse">
+					<div class="toggleCollapse">
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<div class="toggleCollapse">
+					<h2>主菜单</h2>
+					<div>收缩</div>
+				</div>
+
+				<div class="accordion" fillSpace="sidebar">
+					<@menu role=""/>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div id="navTab" class="tabsPage">
+				<div class="tabsPageHeader">
+					<div class="tabsPageHeaderContent">
+						<ul class="navTab-tab">
+							<li tabid="main" class="main"><a href="javascript:;"><span class="home_icon">我的主页&nbsp;</span></a></li>
+						</ul>
+					</div>
+					<div class="tabsLeft">left</div>
+					<div class="tabsRight">right</div>
+					<div class="tabsMore">more</div>
+				</div>
+				<ul class="tabsMoreList">
+					<li><a href="javascript:;">我的主页</a></li>
+				</ul>
+				<div class="navTab-panel tabsPageContent layoutBox">
+					<div class="page unitBox">
+						<div class="accountInfo">
+							<div class="alertInfo"><h3>欢迎${(manager.username)!}</h3></div>
+							<div class="right"></div>
+						</div>
+						<div class="pageFormContent" layoutH="80" style="margin-right:230px">
+						<#--内容-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		Copyright &copy; 2012 <a href="http://www.my1818.net" target="_blank">宁波市名易网络科技有限公司</a>
+	</div>
+<#--showselectoption 是共用的 START-->
+<div id="showSelectOption" class="showSelectOption">
+<#--（中间层）脱离标准流，绝对定位，拥有一个自动的宽高，不够的话，可以自己再设，_filter:alpha(opacity=0);去除iframe颜色，ie6 中 iframe层级永高于select -->
+<iframe style="position:absolute; top:0px; left:0px; border-style:none;z-index:-1;opacity=0;_filter:alpha(opacity=0);"></iframe>
+<div><ul></ul></div><span class="selectdivclose" title="关闭">&nbsp;</span>
+</div>
+<#--showselectoption 是共用的 END-->
+</body>
+</html>
+</#compress><#--用来压缩空白空间和空白的行-->
